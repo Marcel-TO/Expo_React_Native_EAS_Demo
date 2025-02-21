@@ -1,3 +1,5 @@
+# https://docs.expo.dev/eas-update/github-actions/#publish-previews-on-pull-requests
+
 name: preview
 on: pull_request
 
