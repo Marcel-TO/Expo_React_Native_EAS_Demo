@@ -1,3 +1,5 @@
+# https://docs.expo.dev/eas-update/github-actions/#publish-previews-on-pull-requests
+
 name: preview
 on: pull_request
 
@@ -23,7 +25,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
-          cache: yarn
 
       - name: Setup EAS
         uses: expo/expo-github-action@v8
@@ -32,9 +33,11 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
+        working-directory: react-native-demo
 
       - name: Create preview
         uses: expo/expo-github-action/preview@v8
         with:
           command: eas update --auto
+          working-directory: react-native-demo

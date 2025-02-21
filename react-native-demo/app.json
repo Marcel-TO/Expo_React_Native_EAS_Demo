@@ -36,6 +36,21 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "02edad6e-5ccd-488b-b06d-47f07336f1e7"
+      }
+    },
+    "owner": "marcel-to",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/02edad6e-5ccd-488b-b06d-47f07336f1e7"
     }
   }
 }
